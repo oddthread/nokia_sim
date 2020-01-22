@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nokia test</title>
+    <script src="nokia_sim.js"></script>
+</head>
+<body>
+    <div id="root" style="width: 50%; margin:auto;"></div>
+    <script>
+        var ns=nokia_sim(document.getElementById('root'))
+        ns.on("left",function(){
+            ns.play_tone(90);
+        })
+        ns.on("right",function(){
+            ns.stop_tone();
+        })
+        ns.set_pixel(83,47,1);
+        ns.set_pixel(20,20,1);
+        ns.set_pixel(0,0,1);
+    </script>
+</body>
+</html>
